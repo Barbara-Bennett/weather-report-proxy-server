@@ -14,6 +14,7 @@ weather_key = os.environ.get("WEATHER_KEY")
 @proxy_bp.route("/location", methods=["GET"])
 def get_lat_lon():
     loc_query = request.args.get("q")
+    print(loc_query)
     if not loc_query:
         return {"message": "must provide q parameter (location)"}
 
