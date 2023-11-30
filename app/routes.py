@@ -22,6 +22,7 @@ def get_lat_lon():
         "https://us1.locationiq.com/v1/search.php",
         params={"q": loc_query, "key": location_key, "format": "json"}
     )
+    print(response)
 
     return jsonify(response.json())
 
